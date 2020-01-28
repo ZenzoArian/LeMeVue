@@ -1,16 +1,21 @@
 <template>
     <div>
         <div v-bind:key="game.id" v-for="game in games">
-            <h3>{{game.title}}</h3>
+            <GameItem v-bind:game="game" />
         </div>
     </div>
 </template>
 
 <script>
+    import GameItem from './GameItem.vue';
     export default {
         name: "Games",
+        components: {
+            GameItem
+        },
         props: ["games"]
     }
+
 </script>
 
 <style scoped>
