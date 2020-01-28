@@ -1,15 +1,16 @@
 <template>
   <div id="app">
-
+    <Games v-bind:games="games" />
   </div>
 </template>
 
 <script>
+import Games from './components/Games.vue';
 
 export default {
   name: 'app',
   components: {
-
+      Games
   },
   data() {
     return{
