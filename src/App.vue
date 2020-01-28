@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Games v-bind:games="games" />
+    <Games v-bind:games="games" v-on:del-todo="deleteGame" />
   </div>
 </template>
 
@@ -30,7 +30,14 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    deleteGame(id){
+      this.games = this.games.filter(game => game.id !== id);
+    }
   }
+
+
 }
 </script>
 

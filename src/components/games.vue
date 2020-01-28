@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-bind:key="game.id" v-for="game in games">
-            <GameItem v-bind:game="game" />
+            <GameItem v-bind:game="game" v-on:del-game="$emit('del-game'), game.id" />
         </div>
     </div>
 </template>
