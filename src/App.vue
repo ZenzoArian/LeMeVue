@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Games v-bind:games="games" v-on:del-todo="deleteGame" />
+    <Games v-bind:games="games" v-on:del-game="deleteGame" />
   </div>
 </template>
 
