@@ -2,6 +2,7 @@
 <template>
     <header class="header">
         <h1>GameList</h1>
+        <h2>Click the name to gray-out the game</h2>
     </header>
 </template>
 
