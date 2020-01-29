@@ -1,15 +1,18 @@
 <template>
   <div id="app">
+    <Header />
     <Games v-bind:games="games" v-on:del-game="deleteGame" />
   </div>
 </template>
 
 <script>
-import Games from './components/Games.vue';
+  import Header from './components/layout/Header';
+  import Games from './components/Games.vue';
 
 export default {
   name: 'app',
   components: {
+    Header,
       Games
   },
   data() {
